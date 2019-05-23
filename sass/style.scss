@@ -19,18 +19,16 @@ body{
 }
 
     .main-carousel{
-        background: #2E2E2E;
-        text-align: center;
         .carousel-cell {
-        width: 100vw;
         height: 50vh;
+        width: 100vw;
         min-height: 250px;
+        margin-right: 10px;
         background-size: 100% 100%;
         border-radius: 5px;
         display: flex;
         justify-content: center;
         align-items: flex-end;
-        margin-right: 10px;
         .container{
                 max-width: 1200px;
                 p{
