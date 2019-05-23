@@ -1,0 +1,1 @@
+https://miroslawchmielecki.github.io/Plugin-JS-carousel-Flickity---zadanie/
