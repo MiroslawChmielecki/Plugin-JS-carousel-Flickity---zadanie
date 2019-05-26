@@ -1,9 +1,6 @@
 * {
   box-sizing: border-box; }
 
-body {
-  background-color: lightgray; }
-
 .ListSlide {
   display: -ms-flexbox;
   display: flex;
@@ -29,12 +26,19 @@ body {
   display: flex;
   -ms-flex-pack: center;
       justify-content: center;
-  -ms-flex-align: end;
-      align-items: flex-end; }
+  -ms-flex-align: center;
+      align-items: center; }
   .main-carousel .carousel-cell .container {
+    -ms-flex-pack: center;
+        justify-content: center;
     max-width: 1200px; }
-    .main-carousel .carousel-cell .container p {
+    .main-carousel .carousel-cell .container h1 {
+      text-align: center;
       font-size: 36px;
+      color: white;
+      font-weight: bold; }
+    .main-carousel .carousel-cell .container p {
+      font-size: 20px;
       color: #fff;
       font-style: italic; }
 
@@ -52,3 +56,7 @@ body {
   height: 10px;
   width: 0;
   background: grey; }
+
+#map {
+  height: 50vh;
+  width: 100%; }

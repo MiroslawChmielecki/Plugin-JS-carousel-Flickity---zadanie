@@ -19,49 +19,71 @@
         <a href="#carousel-cell5">New Zealand</a>
     </div>
 
-    <div class="carousel">
-        <div class="main-carousel">
-            <div class="carousel-cell" id="carousel-cell1"  style="background-image: url('images/bora-bora.jpg')">
-                <div class="container">
-                    <p>Bora Bora</p>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell2"  style="background-image: url('images/GreatBarrierReef, Australia.jpg')">
-                <div class="container">
-                        <p>Australia</p>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell3"  style="background-image: url('images/hawaii.jpg')">
-                <div class="container">
-                        <p>Hawaii</p>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell4"  style="background-image: url('images/macuPicchuPeru.jpg')">
-                <div class="container">
-                        <p>Peru</p>
-                </div>
-            </div>
-            <div class="carousel-cell" id="carousel-cell5"  style="background-image: url('images/new-zealand.jpg')">
-                <div class="container">
-                        <p>New Zealand</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="main-carousel" id="result"></div>
     
     <div class="buttonRes">
         <button id=buttonReset>From first slide..</button>
     </div>
 
     <div class="progress-bar"></div>
-    
-    
 
-    
+    <div id="map"></div>
+   
+
+    <script>
+        var productsData = [
+            {
+                id: 'carousel-cell1',
+                image: 'images/bora-bora.jpg',
+                title: 'Bora Bora',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</P>',
+                coords: {lat: -16.485763, lng: -151.697897}    
+            },
+            {
+                id: 'carousel-cell2',
+                image: 'images/Australia.jpg',
+                title: 'Australia',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</P>',
+                coords: {lat: -17.998612, lng: 146.833333}    
+                
+            },
+            {
+                id: 'carousel-cell3',
+                image: 'images/hawaii.jpg',
+                title: 'Hawaii',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</P>',
+                coords: {lat: 20.735286, lng: -156.252334}    
+            },
+            {
+                id: 'carousel-cell4',
+                image: 'images/macuPicchuPeru.jpg',
+                title: 'Peru',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</P>',
+                coords: {lat: -13.162786, lng:  -72.544995}    
+            },
+            {
+                id: 'carousel-cell5',
+                image: 'images/new-zealand.jpg',
+                title: 'New Zealand',
+                description: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</P>',
+                coords: {lat: -38.434418, lng: 177.099855}    
+            }
+        ];
+    </script>
+    <script id="template-product-list" type="x-tmpl-mustache">
+        <div class="carousel-cell" id={{id}}  style="background-image: url( {{ image }} )">
+                <div class="container">
+                    <h1> {{ title }} </h1>
+                     {{{ description }}} 
+                </div>
+        </div>
+    </script>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
     <script src="vendor/hash.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdGd-BGP0nWnb2fDwgxt2PmHnYnnGBn8w&callback=initMap"></script>
 </body>
 
 </html>
