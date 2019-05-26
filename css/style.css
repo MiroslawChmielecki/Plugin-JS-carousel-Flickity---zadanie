@@ -56,3 +56,7 @@
   height: 10px;
   width: 0;
   background: grey; }
+
+#map {
+  height: 50vh;
+  width: 100%; }
