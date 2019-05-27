@@ -2,12 +2,9 @@
   box-sizing: border-box; }
 
 .ListSlide {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
   min-height: 40px;
   margin-top: 15px; }
   .ListSlide a {
@@ -22,15 +19,11 @@
   min-height: 250px;
   margin-right: 10px;
   background-size: 100% 100%;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center;
-  -ms-flex-align: center;
-      align-items: center; }
+  justify-content: center;
+  align-items: center; }
   .main-carousel .carousel-cell .container {
-    -ms-flex-pack: center;
-        justify-content: center;
+    justify-content: center;
     max-width: 1200px; }
     .main-carousel .carousel-cell .container h1 {
       text-align: center;

@@ -45,11 +45,6 @@ var flkty = new Flickity( elem, {
   
 });
 
-// element argument can be a selector string
-//   for an individual element
-var flkty = new Flickity( '.main-carousel', {
-  // options
-});
 
 var buttonReset = document.querySelector('#buttonReset');
 buttonReset.addEventListener('click', function(){
