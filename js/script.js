@@ -12,7 +12,7 @@
   
   Mustache.parse(templateList);
   
-  for (var i = 0; i < productsData.length; i++) {
+  for (let i = 0; i < productsData.length; i++) {
     listItems += Mustache.render(templateList, productsData[i]);
     coordinates.push(productsData[i].coords);
     }
@@ -39,19 +39,18 @@ flkty.on( 'scroll', function( progress ) {
 
 
 window.initMap = function () {
-  var markers = [];
-  var map = new google.maps.Map(document.getElementById('map'), {
+  const map = new google.maps.Map(document.getElementById('map'), {
     zoom: 6, 
     center: coordinates[0]
   });
   
-  for(var m = 0; m < coordinates.length; m++){
-    markers[m] = new google.maps.Marker({
+  for(let m = 0; m < coordinates.length; m++){
+    const marker = new google.maps.Marker({
     position: coordinates[m],
     map: map,
   });
     
-    markers[m].addListener('click', function() {
+    marker.addListener('click', function() {
     flkty.select(m);
   });
 };
